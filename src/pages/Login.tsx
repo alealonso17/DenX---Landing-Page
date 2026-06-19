@@ -1,3 +1,7 @@
+import { useLanguage } from "../i18n/language";
+
 export default function Login() {
-  return <h1>Login</h1>;
+  const { t } = useLanguage();
+
+  return <h1>{t("page.login")}</h1>;
 }

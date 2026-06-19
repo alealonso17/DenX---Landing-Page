@@ -1,9 +1,9 @@
-import ProductHero from "../components/layout/product-page/ProductHero";
-import ProductSoftwareCard from "../components/layout/product-page/ProductSoftwareCard";
-import ProductComparitionSection from "../components/layout/product-page/ProductComparitionSection";
-import ProductOperationsSection from "../components/layout/product-page/ProductOperationsSection";
-import ProductIntelligentProcessingSection from "../components/layout/product-page/ProductIntelligentProcessingSection";
-import ProductTestimonialsSection from "../components/layout/product-page/ProductTestimonialsSection";
+import ProductHero from "../components/product-page/ProductHero";
+import ProductSoftwareCard from "../components/product-page/ProductSoftwareCard";
+import ProductComparitionSection from "../components/product-page/ProductComparitionSection";
+import ProductOperationsSection from "../components/product-page/ProductOperationsSection";
+import ProductIntelligentProcessingSection from "../components/product-page/ProductIntelligentProcessingSection";
+import ProductTestimonialsSection from "../components/product-page/ProductTestimonialsSection";
 
 export default function Home(){
     return(

@@ -7,9 +7,11 @@ import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import RequestAccess from "./pages/RequestAccess";
+import { LanguageProvider } from "./i18n/LanguageContext";
 import "./index.css";
 
 createRoot(document.getElementById("root")!).render(
+  <LanguageProvider>
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
@@ -22,4 +24,5 @@ createRoot(document.getElementById("root")!).render(
         </Route>
       </Routes>
     </BrowserRouter>
+  </LanguageProvider>
 );

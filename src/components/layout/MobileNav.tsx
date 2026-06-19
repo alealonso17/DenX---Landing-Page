@@ -1,16 +1,19 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/denx-logo.png";
-import Button from "./ui/Button";
+import Button from "../ui/Button";
+import LanguageToggle from "../ui/LanguageToggle";
+import { useLanguage } from "../../i18n/language";
 
 const mobileNavLinks = [
-    { to: "/", label: "Product", end: true },
-    { to: "/pricing", label: "Pricing" },
-    { to: "/contact", label: "Contact" },
-];
+    { to: "/", labelKey: "nav.product", end: true },
+    { to: "/pricing", labelKey: "nav.pricing", end: false },
+    { to: "/contact", labelKey: "nav.contact", end: false },
+] as const;
 
 export default function MobileNav() {
     const [isOpen, setIsOpen] = useState(false);
+    const { t } = useLanguage();
 
     const linkClassName = ({ isActive }: { isActive: boolean }) =>
         `rounded-2xl px-4 py-3 text-sm font-semibold transition ${
@@ -68,13 +71,14 @@ export default function MobileNav() {
                                 className={linkClassName}
                                 onClick={() => setIsOpen(false)}
                             >
-                                {link.label}
+                                {t(link.labelKey)}
                             </NavLink>
                         ))}
 
                         <div className="mt-2 grid gap-2 border-t border-white/70 pt-3">
-                            <Button type="primary" text="Solicitar Acceso" />
-                            <Button type="outline" text="Login" />
+                            <LanguageToggle />
+                            <Button type="primary" text={t("cta.requestAccess")} />
+                            <Button type="outline" text={t("nav.login")} />
                         </div>
                     </nav>
                 </div>

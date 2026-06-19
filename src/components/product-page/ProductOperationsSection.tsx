@@ -1,4 +1,5 @@
 import Button from "../ui/Button";
+import { useLanguage } from "../../i18n/language";
 
 const reconciliationRows = [
     { label: "INV-2024-0891", status: "ok" },
@@ -29,29 +30,30 @@ function CheckIcon() {
 }
 
 export default function ProductOperationsSection() {
+    const { t } = useLanguage();
+
     return (
         <section className="w-full px-4 py-16 sm:px-6 md:py-24">
             <div className="mx-auto grid max-w-6xl items-center gap-16 md:grid-cols-[1fr_0.95fr]">
                 <div>
                     <h2 className="mb-6 max-w-xl text-3xl font-bold leading-tight tracking-tight text-[#171717] md:text-[46px]">
-                        Automate invoice checks before you pay.
+                        {t("operations.title")}
                     </h2>
                     <p className="mb-9 max-w-xl text-base leading-7 text-[#4F5F5A]">
-                        DenX compares purchase orders, delivery notes, and invoices so your team can spot
-                        discrepancies earlier and reduce manual review.
+                        {t("operations.description")}
                     </p>
 
                     <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-5">
-                        <Button text="Solicitar acceso" type="primary" icon={<ArrowRightIcon />} />
-                        <Button text="View demo" type="outline" />
+                        <Button text={t("cta.requestAccess")} type="primary" icon={<ArrowRightIcon />} />
+                        <Button text={t("operations.demo")} type="outline" />
                     </div>
                 </div>
 
                 <div className="rounded-2xl border border-white/70 bg-white/55 p-5 shadow-xl shadow-[#1F2937]/5 backdrop-blur-2xl">
                     <div className="mb-5 flex items-center justify-between">
-                        <p className="text-xs font-semibold text-[#5B6B82]">Reconciliation Status</p>
+                        <p className="text-xs font-semibold text-[#5B6B82]">{t("operations.cardTitle")}</p>
                         <span className="rounded-md bg-[#E6F6EF] px-3 py-1 text-xs font-semibold text-[#12B981]">
-                            Ready for review
+                            {t("operations.ready")}
                         </span>
                     </div>
 
@@ -68,7 +70,7 @@ export default function ProductOperationsSection() {
                                 <span>{row.label}</span>
                                 {row.status === "discrepancy" ? (
                                     <span className="rounded bg-[#FBE3E3] px-2 py-1 text-xs font-semibold text-[#B54747]">
-                                        Discrepancy
+                                        {t("software.discrepancy")}
                                     </span>
                                 ) : (
                                     <CheckIcon />

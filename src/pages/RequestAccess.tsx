@@ -1,3 +1,7 @@
+import { useLanguage } from "../i18n/language";
+
 export default function RequestAccess() {
-  return <h1>Solicitar Acceso</h1>;
+  const { t } = useLanguage();
+
+  return <h1>{t("page.requestAccess")}</h1>;
 }

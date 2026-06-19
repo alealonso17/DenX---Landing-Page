@@ -1,18 +1,21 @@
 import { useEffect, useRef, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import Button from "./ui/Button";
+import Button from "../ui/Button";
 import logo from "../../assets/denx-logo.png";
 import MobileNav from "./MobileNav";
+import LanguageToggle from "../ui/LanguageToggle";
+import { useLanguage } from "../../i18n/language";
 
 
 const mainNavLinks = [
-    { to: "/", label: "Product", end: true },
-    { to: "/pricing", label: "Pricing" },
-    { to: "/contact", label: "Contact" },
-];
+    { to: "/", labelKey: "nav.product", end: true },
+    { to: "/pricing", labelKey: "nav.pricing", end: false },
+    { to: "/contact", labelKey: "nav.contact", end: false },
+] as const;
 
 export default function Header(){
     const location = useLocation();
+    const { language, t } = useLanguage();
     const navRef = useRef<HTMLDivElement>(null);
     const linkRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
     const [sliderStyle, setSliderStyle] = useState({ left: 0, width: 0 });
@@ -36,7 +39,7 @@ export default function Header(){
             left: activeRect.left - navRect.left,
             width: activeRect.width,
         });
-    }, [location.pathname]);
+    }, [location.pathname, language]);
 
     return(
         <header
@@ -60,7 +63,7 @@ export default function Header(){
                         }}
                         className={navLinkClassName}
                     >
-                        {link.label}
+                        {t(link.labelKey)}
                     </NavLink>
                 ))}
                 <span
@@ -73,8 +76,9 @@ export default function Header(){
             </div>
 
             <div className='hidden items-center gap-4 md:flex'>
-                <Button type='primary' text='Solicitar Acceso' />
-                <Button type='outline' text='Login' />
+                <LanguageToggle />
+                <Button type='primary' text={t("cta.requestAccess")} />
+                <Button type='outline' text={t("nav.login")} />
             </div>
         </header>
     )
