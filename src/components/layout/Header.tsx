@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import Button from "./ui/Button";
+import logo from "../../assets/denx-logo.png";
+
 
 const mainNavLinks = [
     { to: "/", label: "Product", end: true },
@@ -36,12 +38,13 @@ export default function Header(){
     }, [location.pathname]);
 
     return(
-        <header className='bg-[#FBF9F9] flex justify-between items-center min-w-full border-b border-gray-200 min-h-16 px-18 py-4 max-w-7xl'>
-            <div className='flex items-center justify-between  '>
+        <header className='bg-[#FBF9F9] flex justify-between items-center min-w-full border-b border-gray-200 min-h-16 px-12 py-4 max-w-7xl'>
+            <div className='flex items-center justify-between gap-4'>
+                <img src={logo} alt="DenX Logo" className='w-10 h-10' />
                 <NavLink to='/' className='text-2xl font-bold text-[#016D49]'>DenX</NavLink>
             </div>
 
-            <div ref={navRef} className='relative flex items-center left-20 gap-12 pb-2'>
+            <div ref={navRef} className='relative flex items-center left-10 gap-12 pb-2'>
                 {mainNavLinks.map((link) => (
                     <NavLink
                         key={link.to}

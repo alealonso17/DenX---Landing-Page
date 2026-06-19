@@ -6,17 +6,17 @@ type ButtonProps = {
 };
 
 const buttonStyles: Record<ButtonVariant, string> = {
-    primary: "bg-[#12B981] text-white border border-[#12B981] rounded",
-    secondary: "bg-[#F4F0F0] text-[#33453D] border border-[#F4F0F0] rounded",
-    inverted: "bg-[#2F2D2D] text-white border border-[#2F2D2D] rounded",
-    outline: "bg-transparent text-[#33453D] border border-[#71847C] rounded",
+    primary: "bg-[#12B981] text-white  rounded cursor-pointer hover:bg-[#016D49]",
+    secondary: "bg-[#F4F0F0] text-[#33453D]  rounded cursor-pointer hover:bg-[#E4E0E0]",
+    inverted: "bg-[#2F2D2D] text-white  rounded cursor-pointer hover:bg-[#1A1818]",
+    outline: "bg-transparent text-[#33453D]  rounded cursor-pointer hover:bg-[#E4E0E0]",
 };
 
 export default function Button({ text, type }: ButtonProps) {
     return (
         <button
             type="button"
-            className={`inline-flex text-[13px] items-center justify-center px-7 py-3 font-medium transition-colors duration-200 hover:opacity-90 ${buttonStyles[type]}`}
+            className={`inline-flex text-[13px] items-center justify-center px-7 py-3 font-medium transition-colors duration-200  ${buttonStyles[type]}`}
         >
             {text}
         </button>
