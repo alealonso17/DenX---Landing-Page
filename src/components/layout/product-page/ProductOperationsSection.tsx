@@ -30,10 +30,10 @@ function CheckIcon() {
 
 export default function ProductOperationsSection() {
     return (
-        <section className="w-full px-6 py-24">
+        <section className="w-full px-4 py-16 sm:px-6 md:py-24">
             <div className="mx-auto grid max-w-6xl items-center gap-16 md:grid-cols-[1fr_0.95fr]">
                 <div>
-                    <h2 className="mb-6 max-w-xl text-4xl font-bold leading-tight tracking-tight text-[#171717] md:text-[46px]">
+                    <h2 className="mb-6 max-w-xl text-3xl font-bold leading-tight tracking-tight text-[#171717] md:text-[46px]">
                         Automate invoice checks before you pay.
                     </h2>
                     <p className="mb-9 max-w-xl text-base leading-7 text-[#4F5F5A]">
@@ -41,7 +41,7 @@ export default function ProductOperationsSection() {
                         discrepancies earlier and reduce manual review.
                     </p>
 
-                    <div className="flex flex-wrap items-center gap-5">
+                    <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-5">
                         <Button text="Solicitar acceso" type="primary" icon={<ArrowRightIcon />} />
                         <Button text="View demo" type="outline" />
                     </div>

@@ -5,7 +5,7 @@ const reviews = [
         quote:
             "Lo que más nos interesa es detectar diferencias antes de pagar. Si DenX nos evita revisar cada factura a mano, el ahorro de tiempo es claro.",
         className:
-            "[grid-area:stack] -translate-x-6 -translate-y-8 hover:-translate-y-14 md:-translate-x-10",
+            "[grid-area:stack] -translate-x-2 -translate-y-8 hover:-translate-y-14 md:-translate-x-10",
     },
     {
         role: "Director de operaciones",
@@ -13,7 +13,7 @@ const reviews = [
         quote:
             "Tener pedido, albarán y factura comparados en un solo expediente cambiaría mucho nuestro proceso de aprobación.",
         className:
-            "[grid-area:stack] translate-x-6 translate-y-8 hover:translate-y-2 md:translate-x-14",
+            "[grid-area:stack] translate-x-2 translate-y-8 hover:translate-y-2 md:translate-x-14",
     },
     {
         role: "Dueña de pyme",
@@ -21,7 +21,7 @@ const reviews = [
         quote:
             "No necesito más herramientas complicadas. Necesito saber si lo que me facturan coincide con lo que pedí y recibí.",
         className:
-            "[grid-area:stack] translate-x-12 translate-y-24 hover:translate-y-16 md:translate-x-28",
+            "[grid-area:stack] translate-x-4 translate-y-24 hover:translate-y-16 md:translate-x-28",
     },
 ];
 
@@ -37,7 +37,7 @@ function Stars() {
 
 export default function ProductTestimonialsSection() {
     return (
-        <section className="relative w-full overflow-hidden px-6 py-28">
+        <section className="relative w-full overflow-hidden px-4 py-16 sm:px-6 md:py-28">
             <div className="absolute left-10 top-20 h-72 w-72 rounded-full bg-[#12B981]/10 blur-3xl" />
             <div className="absolute right-12 bottom-12 h-80 w-80 rounded-full bg-white/80 blur-3xl" />
 
@@ -46,7 +46,7 @@ export default function ProductTestimonialsSection() {
                     <span className="mb-4 inline-flex rounded-full border border-white/70 bg-white/45 px-4 py-2 text-xs font-semibold text-[#12B981] backdrop-blur-xl">
                         Early access feedback
                     </span>
-                    <h2 className="mb-5 max-w-xl text-4xl font-bold leading-tight tracking-tight text-[#171717] md:text-[44px]">
+                    <h2 className="mb-5 max-w-xl text-3xl font-bold leading-tight tracking-tight text-[#171717] md:text-[44px]">
                         Designed for teams that cannot afford silent invoice mistakes.
                     </h2>
                     <p className="max-w-xl text-base leading-7 text-[#5B6B82]">
@@ -60,7 +60,7 @@ export default function ProductTestimonialsSection() {
                         {reviews.map((review, index) => (
                             <article
                                 key={review.role}
-                                className={`relative flex min-h-52 w-[21rem] select-none flex-col justify-between rounded-3xl border border-white/70 bg-white/50 p-6 shadow-2xl shadow-[#1F2937]/10 backdrop-blur-2xl transition-all duration-500 hover:scale-[1.02] hover:bg-white/70 md:w-[24rem] ${review.className}`}
+                                className={`relative flex min-h-52 w-[min(19rem,calc(100vw-3rem))] select-none flex-col justify-between rounded-3xl border border-white/70 bg-white/50 p-5 shadow-2xl shadow-[#1F2937]/10 backdrop-blur-2xl transition-all duration-500 hover:scale-[1.02] hover:bg-white/70 sm:w-[21rem] sm:p-6 md:w-[24rem] ${review.className}`}
                                 style={{ zIndex: reviews.length - index }}
                             >
                                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />

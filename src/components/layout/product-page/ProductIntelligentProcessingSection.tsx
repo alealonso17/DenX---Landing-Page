@@ -56,7 +56,7 @@ const alertRows = [
 
 export default function ProductIntelligentProcessingSection() {
     return (
-        <section className="relative w-full overflow-hidden px-6 py-28">
+        <section className="relative w-full overflow-hidden px-4 py-16 sm:px-6 md:py-28">
             <div className="absolute left-1/2 top-20 h-80 w-80 -translate-x-1/2 rounded-full bg-[#12B981]/10 blur-3xl" />
             <div className="absolute right-12 bottom-16 h-56 w-56 rounded-full bg-white/70 blur-3xl" />
 
@@ -74,7 +74,7 @@ export default function ProductIntelligentProcessingSection() {
                     {featureCards.map((card, index) => (
                         <article
                             key={card.title}
-                            className={`group relative overflow-hidden rounded-3xl border border-white/70 bg-white/45 p-7 shadow-xl shadow-[#1F2937]/5 backdrop-blur-2xl transition duration-300 hover:-translate-y-1 hover:bg-white/65 ${
+                            className={`group relative overflow-hidden rounded-3xl border border-white/70 bg-white/45 p-5 shadow-xl shadow-[#1F2937]/5 backdrop-blur-2xl transition duration-300 hover:-translate-y-1 hover:bg-white/65 sm:p-7 ${
                                 index === 1 ? "md:col-span-2" : ""
                             }`}
                         >
@@ -108,7 +108,7 @@ export default function ProductIntelligentProcessingSection() {
                         </article>
                     ))}
 
-                    <article className="relative overflow-hidden rounded-3xl border border-white/70 bg-white/45 p-7 shadow-xl shadow-[#1F2937]/5 backdrop-blur-2xl md:col-span-3">
+                    <article className="relative overflow-hidden rounded-3xl border border-white/70 bg-white/45 p-5 shadow-xl shadow-[#1F2937]/5 backdrop-blur-2xl sm:p-7 md:col-span-3">
                         <div className="grid gap-8 md:grid-cols-[0.9fr_1.5fr] md:items-center">
                             <div>
                                 <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-xl border border-white/70 bg-white/70 text-[#4F5F5A] shadow-inner">

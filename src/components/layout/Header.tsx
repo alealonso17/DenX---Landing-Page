@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import Button from "./ui/Button";
 import logo from "../../assets/denx-logo.png";
+import MobileNav from "./MobileNav";
 
 
 const mainNavLinks = [
@@ -15,7 +16,6 @@ export default function Header(){
     const navRef = useRef<HTMLDivElement>(null);
     const linkRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
     const [sliderStyle, setSliderStyle] = useState({ left: 0, width: 0 });
-    const [hasScrolled, setHasScrolled] = useState(false);
 
     const navLinkClassName = ({ isActive }: { isActive: boolean }) =>
         `text-sm font-medium ${isActive ? "text-[#12B981]" : "text-gray-500"}`;
@@ -38,31 +38,18 @@ export default function Header(){
         });
     }, [location.pathname]);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setHasScrolled(window.scrollY > 8);
-        };
-
-        handleScroll();
-        window.addEventListener("scroll", handleScroll, { passive: true });
-
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
     return(
         <header
-            className={`sticky top-0 z-50 flex min-h-16 min-w-full items-center justify-between px-12 py-4 transition-all duration-300 ${
-                hasScrolled
-                    ? "border-b border-white/70 bg-white/55 shadow-lg shadow-[#1F2937]/5 backdrop-blur-2xl"
-                    : "border-b border-transparent bg-white/15 backdrop-blur-sm"
-            }`}
+            className="sticky top-0 z-50 flex min-h-16 min-w-full items-center justify-between border-b border-white/70 bg-white/55 px-4 py-4 shadow-lg shadow-[#1F2937]/5 backdrop-blur-2xl transition-all duration-300 md:px-12"
         >
-            <div className='flex items-center justify-between gap-4'>
+            <MobileNav />
+
+            <div className='hidden items-center justify-between gap-4 md:flex'>
                 <img src={logo} alt="DenX Logo" className='w-10 h-10' />
                 <NavLink to='/' className='text-2xl font-bold text-[#016D49]'>DenX</NavLink>
             </div>
 
-            <div ref={navRef} className='relative flex items-center left-10 gap-12 pb-2'>
+            <div ref={navRef} className='relative left-10 hidden items-center gap-12 pb-2 md:flex'>
                 {mainNavLinks.map((link) => (
                     <NavLink
                         key={link.to}
@@ -85,7 +72,7 @@ export default function Header(){
                 />
             </div>
 
-            <div className='flex items-center gap-4'>
+            <div className='hidden items-center gap-4 md:flex'>
                 <Button type='primary' text='Solicitar Acceso' />
                 <Button type='outline' text='Login' />
             </div>

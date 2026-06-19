@@ -36,13 +36,13 @@ const comparisonRows = [
 
 export default function ProductComparitionSection() {
     return (
-        <section className="w-full h-auto flex flex-col items-center justify-center py-24">
+        <section className="flex h-auto w-full flex-col items-center justify-center px-4 py-16 md:py-24">
             <header className="text-center">
-                <h2 className="font-headline-lg text-[30px] text-headline-lg md:text-display-lg font-bold text-neutral-primary mb-4">Manual reconciliation is costing you...</h2>
-                <p className="font-body-lg text-body-lg text-neutral-secondary max-w-2xl mx-auto opacity-40">But with DenX, the process becomes seamless and automated.</p>
+                <h2 className="mb-4 text-3xl font-bold text-neutral-primary md:text-display-lg">Manual reconciliation is costing you...</h2>
+                <p className="mx-auto max-w-2xl text-sm leading-6 text-neutral-secondary opacity-50 sm:text-base">But with DenX, the process becomes seamless and automated.</p>
             </header>
 
-            <section className="relative mt-20 w-full max-w-6xl rounded-[2rem] border border-white/60 bg-white/25 px-6 py-12 shadow-xl shadow-[#1F2937]/5 backdrop-blur-xl">
+            <section className="relative mt-12 w-full max-w-6xl rounded-[2rem] border border-white/60 bg-white/25 px-4 py-10 shadow-xl shadow-[#1F2937]/5 backdrop-blur-xl sm:px-6 md:mt-20 md:py-12">
                 <div className="absolute left-1/2 top-0 hidden h-[78%] -translate-x-1/2 border-l border-dashed border-[#D8E4E0] md:block" />
 
                 <div className="space-y-20">

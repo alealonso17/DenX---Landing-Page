@@ -17,7 +17,7 @@ export default function Button({ text, type, icon}: ButtonProps) {
     return (
         <button
             type="button"
-            className={`inline-flex text-[13px] items-center justify-center px-7 py-3 font-medium transition-colors duration-200  ${buttonStyles[type]}`}
+            className={`inline-flex w-full items-center justify-center px-7 py-3 text-[13px] font-medium transition-colors duration-200 sm:w-auto ${buttonStyles[type]}`}
         >
             {icon && <div className='mr-3'>{icon}</div>}
             {text}

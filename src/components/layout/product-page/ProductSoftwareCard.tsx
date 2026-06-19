@@ -21,8 +21,8 @@ const reconciliationRows = [
 
 export default function ProductSoftwareCard() {
     return(
-        <div className='w-[80%] max-w-6xl overflow-hidden rounded-2xl border border-white/70 bg-white/60 shadow-xl shadow-[#1F2937]/5 backdrop-blur-2xl mt-15 mb-30'>
-            <div className='flex items-center justify-between border-b border-white/70 px-6 py-4'>
+        <div className='mt-12 mb-20 w-[calc(100%-2rem)] max-w-6xl overflow-hidden rounded-2xl border border-white/70 bg-white/60 shadow-xl shadow-[#1F2937]/5 backdrop-blur-2xl sm:mt-15 sm:mb-30 sm:w-[90%] lg:w-[80%]'>
+            <div className='flex flex-col gap-3 border-b border-white/70 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6'>
                 <div className='flex items-center gap-3'>
                     <svg
                         aria-hidden="true"
@@ -43,13 +43,13 @@ export default function ProductSoftwareCard() {
                 </span>
             </div>
 
-            <div className='grid grid-cols-[260px_1fr]'>
-                <aside className='border-r border-white/70 py-5'>
+            <div className='grid lg:grid-cols-[260px_1fr]'>
+                <aside className='grid grid-cols-2 border-b border-white/70 py-3 lg:block lg:border-r lg:border-b-0 lg:py-5'>
                     {invoices.map((invoice) => (
                         <div
                             key={invoice.id}
-                            className={`relative px-8 py-5 text-center ${
-                                invoice.active ? "bg-white/55" : "bg-transparent"
+                            className={`relative px-4 py-4 text-center sm:px-8 sm:py-5 ${
+                                invoice.active ? "bg-[#E6F6EF]/55" : "bg-transparent"
                             }`}
                         >
                             {invoice.active && (
@@ -61,34 +61,36 @@ export default function ProductSoftwareCard() {
                     ))}
                 </aside>
 
-                <div className='px-9 py-5'>
-                    <div className='grid grid-cols-[1.3fr_1fr_1fr_0.7fr] border-b border-white/70 pb-3 text-xs font-medium text-gray-500'>
-                        <span>Document</span>
-                        <span>Ordered Amount</span>
-                        <span>Invoiced Amount</span>
-                        <span>Status</span>
-                    </div>
+                <div className='overflow-x-auto px-4 py-5 sm:px-9'>
+                    <div className='min-w-[640px]'>
+                        <div className='grid grid-cols-[1.3fr_1fr_1fr_0.7fr] border-b border-white/70 pb-3 text-xs font-medium text-gray-500'>
+                            <span>Document</span>
+                            <span>Ordered Amount</span>
+                            <span>Invoiced Amount</span>
+                            <span>Status</span>
+                        </div>
 
-                    <div>
-                        {reconciliationRows.map((row) => (
-                            <div
-                                key={row.document}
-                                className='grid grid-cols-[1.3fr_1fr_1fr_0.7fr] items-center border-b border-white/60 py-5 last:border-b-0'
-                            >
-                                <span className='text-sm font-medium text-[#1F2925]'>{row.document}</span>
-                                <span className='font-mono text-sm text-[#1F2925]'>{row.orderedAmount}</span>
-                                <span className='font-mono text-sm text-[#1F2925]'>{row.invoicedAmount}</span>
-                                <span
-                                    className={`w-fit rounded-md px-3 py-1 text-xs font-semibold ${
-                                        row.status === "Discrepancy"
-                                            ? "bg-[#FCE6E6] text-[#A33A3A]"
-                                            : "bg-[#DFF8E8] text-[#016D49]"
-                                    }`}
+                        <div>
+                            {reconciliationRows.map((row) => (
+                                <div
+                                    key={row.document}
+                                    className='grid grid-cols-[1.3fr_1fr_1fr_0.7fr] items-center border-b border-white/60 py-5 last:border-b-0'
                                 >
-                                    {row.status}
-                                </span>
-                            </div>
-                        ))}
+                                    <span className='text-sm font-medium text-[#1F2925]'>{row.document}</span>
+                                    <span className='font-mono text-sm text-[#1F2925]'>{row.orderedAmount}</span>
+                                    <span className='font-mono text-sm text-[#1F2925]'>{row.invoicedAmount}</span>
+                                    <span
+                                        className={`w-fit rounded-md px-3 py-1 text-xs font-semibold ${
+                                            row.status === "Discrepancy"
+                                                ? "bg-[#FCE6E6] text-[#A33A3A]"
+                                                : "bg-[#DFF8E8] text-[#016D49]"
+                                        }`}
+                                    >
+                                        {row.status}
+                                    </span>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
