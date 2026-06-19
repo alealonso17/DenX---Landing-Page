@@ -1,0 +1,8 @@
+export default function HeroPricing() {
+    return(
+        <section className='flex h-auto w-full flex-col items-center justify-center px-4'>
+            <h1 className='mx-auto mb-6 max-w-4xl pt-20 text-center text-xl font-bold leading-tight tracking-tight text-neutral-primary sm:pt-24 sm:text-[20px] md:pt-30 md:text-[30px]'> <br className="hidden sm:block" /> Simple, transparent pricing for growing teams.</h1>
+            <p className='mx-auto mb-10 max-w-2xl text-center text-sm leading-6 text-neutral-secondary opacity-50 sm:text-base'>High-performance reconciliation tools without the complex contracts. Choose the scale that fits your operational needs.</p>
+        </section>
+    )
+}
