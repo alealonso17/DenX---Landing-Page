@@ -15,6 +15,7 @@ export default function Header(){
     const navRef = useRef<HTMLDivElement>(null);
     const linkRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
     const [sliderStyle, setSliderStyle] = useState({ left: 0, width: 0 });
+    const [hasScrolled, setHasScrolled] = useState(false);
 
     const navLinkClassName = ({ isActive }: { isActive: boolean }) =>
         `text-sm font-medium ${isActive ? "text-[#12B981]" : "text-gray-500"}`;
@@ -37,8 +38,25 @@ export default function Header(){
         });
     }, [location.pathname]);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            setHasScrolled(window.scrollY > 8);
+        };
+
+        handleScroll();
+        window.addEventListener("scroll", handleScroll, { passive: true });
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return(
-        <header className='bg-[#FBF9F9] flex justify-between items-center min-w-full border-b border-gray-200 min-h-16 px-12 py-4 max-w-7xl'>
+        <header
+            className={`sticky top-0 z-50 flex min-h-16 min-w-full items-center justify-between px-12 py-4 transition-all duration-300 ${
+                hasScrolled
+                    ? "border-b border-white/70 bg-white/55 shadow-lg shadow-[#1F2937]/5 backdrop-blur-2xl"
+                    : "border-b border-transparent bg-white/15 backdrop-blur-sm"
+            }`}
+        >
             <div className='flex items-center justify-between gap-4'>
                 <img src={logo} alt="DenX Logo" className='w-10 h-10' />
                 <NavLink to='/' className='text-2xl font-bold text-[#016D49]'>DenX</NavLink>
