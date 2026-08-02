@@ -71,7 +71,7 @@ export default function PricesChart() {
 
                         <div className={plan.highlight ? "pt-6" : ""}>
                             <h2 className="mb-5 text-2xl font-bold text-[#171717]">{plan.name}</h2>
-                            <div className="mb-3 flex items-end gap-2">
+                            <div className="mb-3 flex select-none items-end gap-2 blur-[7px]" aria-hidden="true">
                                 <span className="text-5xl font-bold tracking-tight text-[#171717]">
                                     {plan.price === "pricing.custom" ? t("pricing.custom") : plan.price}
                                 </span>
@@ -96,6 +96,17 @@ export default function PricesChart() {
                         </div>
                     </article>
                 ))}
+
+                <div className="pointer-events-none absolute inset-0 z-20 flex items-start justify-center pt-16 sm:pt-20 lg:items-center lg:pt-0">
+                    <div className="mx-4 max-w-md rounded-2xl border border-[#12B981]/30 bg-white/85 px-6 py-5 text-center shadow-2xl shadow-[#1F2937]/10 backdrop-blur-md sm:px-8 sm:py-6">
+                        <span className="mb-3 inline-flex items-center gap-2 rounded-full bg-[#E6F6EF] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-[#0E8A61]">
+                            <span className="h-1.5 w-1.5 rounded-full bg-[#12B981]" />
+                            {t("pricing.wip.badge")}
+                        </span>
+                        <h3 className="mb-2 text-xl font-bold tracking-tight text-[#171717]">{t("pricing.wip.title")}</h3>
+                        <p className="text-sm leading-6 text-[#5B6B82]">{t("pricing.wip.description")}</p>
+                    </div>
+                </div>
             </div>
         </section>
     )

@@ -19,6 +19,10 @@ export const translations = {
             "Reconciliation tools without complex contracts. Choose the scale that fits your operational needs.",
         "pricing.mostPopular": "Most popular",
         "pricing.month": "/mo",
+        "pricing.wip.badge": "In development",
+        "pricing.wip.title": "We're still defining our plans",
+        "pricing.wip.description":
+            "The prices below are not final. Request access and we'll tell you what it would cost for your document volume.",
         "pricing.early.description": "For small teams starting to control supplier invoices.",
         "pricing.growth.description": "For teams with recurring purchases and more review volume.",
         "pricing.enterprise.description": "For high-volume operations that need direct onboarding.",
@@ -156,6 +160,10 @@ export const translations = {
             "Herramientas de reconciliación sin contratos complejos. Elige la escala que encaja con tu operativa.",
         "pricing.mostPopular": "Más popular",
         "pricing.month": "/mes",
+        "pricing.wip.badge": "En desarrollo",
+        "pricing.wip.title": "Todavía estamos definiendo los planes",
+        "pricing.wip.description":
+            "Los precios que ves no son definitivos. Solicita acceso y te decimos qué coste tendría para tu volumen de documentos.",
         "pricing.early.description": "Para equipos pequeños que empiezan a controlar facturas de proveedores.",
         "pricing.growth.description": "Para equipos con compras recurrentes y más volumen de revisión.",
         "pricing.enterprise.description": "Para operaciones de alto volumen que necesitan acompañamiento directo.",
