@@ -1,5 +1,6 @@
 import Button from "../ui/Button";
 import { useLanguage } from "../../i18n/language";
+import { useComingSoon } from "../ui/comingSoon";
 
 const reconciliationRows = [
     { label: "INV-2024-0891", status: "ok" },
@@ -31,6 +32,7 @@ function CheckIcon() {
 
 export default function ProductOperationsSection() {
     const { t } = useLanguage();
+    const { showComingSoon } = useComingSoon();
 
     return (
         <section className="w-full px-4 py-16 sm:px-6 md:py-24">
@@ -44,8 +46,8 @@ export default function ProductOperationsSection() {
                     </p>
 
                     <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-5">
-                        <Button text={t("cta.requestAccess")} type="primary" icon={<ArrowRightIcon />} />
-                        <Button text={t("operations.demo")} type="outline" />
+                        <Button text={t("cta.requestAccess")} type="primary" icon={<ArrowRightIcon />} to="/contact" />
+                        <Button text={t("operations.demo")} type="outline" onClick={showComingSoon} />
                     </div>
                 </div>
 

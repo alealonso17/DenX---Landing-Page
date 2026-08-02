@@ -92,7 +92,7 @@ export default function PricesChart() {
                         </ul>
 
                         <div className="mt-auto">
-                            <Button text={t("cta.requestAccess")} type={plan.highlight ? "primary" : "outline"} />
+                            <Button text={t("cta.requestAccess")} type={plan.highlight ? "primary" : "outline"} to="/contact" />
                         </div>
                     </article>
                 ))}

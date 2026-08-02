@@ -5,6 +5,7 @@ import logo from "../../assets/denx-logo.png";
 import MobileNav from "./MobileNav";
 import LanguageToggle from "../ui/LanguageToggle";
 import { useLanguage } from "../../i18n/language";
+import { useComingSoon } from "../ui/comingSoon";
 
 
 const mainNavLinks = [
@@ -16,6 +17,7 @@ const mainNavLinks = [
 export default function Header(){
     const location = useLocation();
     const { language, t } = useLanguage();
+    const { showComingSoon } = useComingSoon();
     const navRef = useRef<HTMLDivElement>(null);
     const linkRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
     const [sliderStyle, setSliderStyle] = useState({ left: 0, width: 0 });
@@ -77,8 +79,8 @@ export default function Header(){
 
             <div className='hidden items-center gap-4 md:flex'>
                 <LanguageToggle />
-                <Button type='primary' text={t("cta.requestAccess")} />
-                <Button type='outline' text={t("nav.login")} />
+                <Button type='primary' text={t("cta.requestAccess")} to='/contact' />
+                <Button type='outline' text={t("nav.login")} onClick={showComingSoon} />
             </div>
         </header>
     )

@@ -4,6 +4,7 @@ import logo from "../../assets/denx-logo.png";
 import Button from "../ui/Button";
 import LanguageToggle from "../ui/LanguageToggle";
 import { useLanguage } from "../../i18n/language";
+import { useComingSoon } from "../ui/comingSoon";
 
 const mobileNavLinks = [
     { to: "/", labelKey: "nav.product", end: true },
@@ -14,6 +15,7 @@ const mobileNavLinks = [
 export default function MobileNav() {
     const [isOpen, setIsOpen] = useState(false);
     const { t } = useLanguage();
+    const { showComingSoon } = useComingSoon();
 
     const linkClassName = ({ isActive }: { isActive: boolean }) =>
         `rounded-2xl px-4 py-3 text-sm font-semibold transition ${
@@ -77,8 +79,20 @@ export default function MobileNav() {
 
                         <div className="mt-2 grid gap-2 border-t border-white/70 pt-3">
                             <LanguageToggle />
-                            <Button type="primary" text={t("cta.requestAccess")} />
-                            <Button type="outline" text={t("nav.login")} />
+                            <Button
+                                type="primary"
+                                text={t("cta.requestAccess")}
+                                to="/contact"
+                                onClick={() => setIsOpen(false)}
+                            />
+                            <Button
+                                type="outline"
+                                text={t("nav.login")}
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    showComingSoon();
+                                }}
+                            />
                         </div>
                     </nav>
                 </div>

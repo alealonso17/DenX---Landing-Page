@@ -10,6 +10,11 @@ export const translations = {
         "nav.login": "Login",
         "cta.requestAccess": "Request access",
         "language.label": "Language",
+        "comingSoon.badge": "In development",
+        "comingSoon.title": "We're working on it",
+        "comingSoon.description":
+            "This part of DenX isn't ready yet. We're finishing it before opening it up. If you want to try it in your company, request access and we'll get in touch.",
+        "comingSoon.close": "Got it",
         "productHero.title": "Stop overpaying your suppliers without realizing it.",
         "productHero.description":
             "DenX automates the comparison of purchase orders, delivery notes, and invoices to detect discrepancies before payment.",
@@ -101,21 +106,21 @@ export const translations = {
         "testimonials.badge": "Early access feedback",
         "testimonials.title": "Designed for teams that cannot afford silent invoice mistakes.",
         "testimonials.description":
-            "These example reviews reflect the kind of feedback DenX is built around: less manual checking, clearer discrepancies, and more control before approving payments.",
-        "testimonials.review": "Review",
+            "DenX isn't open to everyone yet. These are illustrative first impressions from the kind of team we're building it with, while the product is still in development.",
+        "testimonials.review": "First impressions",
         "testimonials.stars": "5 stars",
         "testimonials.1.role": "Administration manager",
         "testimonials.1.company": "Distribution company",
         "testimonials.1.quote":
-            "What interests us most is detecting differences before paying. If DenX helps us avoid checking every invoice by hand, the time saving is clear.",
+            "From the little we've been able to test, it looks really promising. It caught an invoice that came in above the purchase order and would have gone straight through. That one alone pays for the month.",
         "testimonials.2.role": "Operations director",
         "testimonials.2.company": "Industrial supplier",
         "testimonials.2.quote":
-            "Having purchase order, delivery note, and invoice compared in one case would change our approval process a lot.",
+            "We used to cross-check purchase order, delivery note, and invoice by hand, whenever we remembered. Seeing the three of them together in one case is going to take a real weight off the team.",
         "testimonials.3.role": "SMB owner",
         "testimonials.3.company": "Recurring purchases",
         "testimonials.3.quote":
-            "I do not need more complicated tools. I need to know whether what I am invoiced matches what I ordered and received.",
+            "I'm not a tech person and I didn't need to be. You forward the supplier's emails and it tells you what doesn't add up. If it works like this when they open it up, we're in.",
         "footer.title": "Stop paying invoice mistakes in silence.",
         "footer.description":
             "Compare purchase orders, delivery notes, and invoices before approving payment. Built for teams that need fewer manual checks and clearer discrepancies.",
@@ -151,6 +156,11 @@ export const translations = {
         "nav.login": "Acceder",
         "cta.requestAccess": "Solicitar acceso",
         "language.label": "Idioma",
+        "comingSoon.badge": "En desarrollo",
+        "comingSoon.title": "Estamos trabajando en ello",
+        "comingSoon.description":
+            "Esta parte de DenX todavía no está lista. La estamos terminando antes de abrirla. Si quieres probarlo en tu empresa, solicita acceso y te contactamos.",
+        "comingSoon.close": "Entendido",
         "productHero.title": "Deja de pagar de más a tus proveedores sin darte cuenta.",
         "productHero.description":
             "DenX automatiza la comparación de pedidos, albaranes y facturas para detectar discrepancias antes del pago.",
@@ -242,21 +252,21 @@ export const translations = {
         "testimonials.badge": "Feedback early access",
         "testimonials.title": "Diseñado para equipos que no pueden permitirse errores silenciosos en facturas.",
         "testimonials.description":
-            "Estas reviews de ejemplo reflejan el tipo de feedback para el que se construye DenX: menos revisión manual, discrepancias más claras y más control antes de pagar.",
-        "testimonials.review": "Review",
+            "DenX todavía no está abierto a todo el mundo. Estas son primeras impresiones ilustrativas del tipo de equipo con el que lo estamos construyendo, mientras el producto sigue en desarrollo.",
+        "testimonials.review": "Primeras impresiones",
         "testimonials.stars": "5 estrellas",
         "testimonials.1.role": "Responsable de administración",
         "testimonials.1.company": "Empresa de distribución",
         "testimonials.1.quote":
-            "Lo que más nos interesa es detectar diferencias antes de pagar. Si DenX nos evita revisar cada factura a mano, el ahorro de tiempo es claro.",
+            "Lo poco que hemos podido probar tiene muy buena pinta. Nos cazó una factura que venía por encima del pedido y que se nos habría colado tal cual. Solo con esa ya nos sale a cuenta el mes.",
         "testimonials.2.role": "Director de operaciones",
         "testimonials.2.company": "Proveedor industrial",
         "testimonials.2.quote":
-            "Tener pedido, albarán y factura comparados en un solo expediente cambiaría mucho nuestro proceso de aprobación.",
+            "Veníamos de cruzar pedido, albarán y factura a mano, cuando nos acordábamos. Ver los tres juntos en un mismo expediente nos va a quitar un peso de encima importante.",
         "testimonials.3.role": "Dueña de pyme",
         "testimonials.3.company": "Compras recurrentes",
         "testimonials.3.quote":
-            "No necesito más herramientas complicadas. Necesito saber si lo que me facturan coincide con lo que pedí y recibí.",
+            "Yo de tecnología no entiendo y no me hizo falta. Reenvías los correos del proveedor y te avisa de lo que no cuadra. Si cuando lo abran funciona así, lo tenemos claro.",
         "footer.title": "Deja de pagar errores de factura en silencio.",
         "footer.description":
             "Compara pedidos, albaranes y facturas antes de aprobar el pago. Pensado para equipos que necesitan menos revisión manual y discrepancias más claras.",

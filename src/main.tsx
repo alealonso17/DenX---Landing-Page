@@ -8,21 +8,24 @@ import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import RequestAccess from "./pages/RequestAccess";
 import { LanguageProvider } from "./i18n/LanguageContext";
+import { ComingSoonProvider } from "./components/ui/ComingSoonProvider";
 import "./index.css";
 
 createRoot(document.getElementById("root")!).render(
   <LanguageProvider>
-    <BrowserRouter>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route index element={<Product />} />
-          <Route path="/product" element={<Product />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/solicitar-acceso" element={<RequestAccess />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <ComingSoonProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route index element={<Product />} />
+            <Route path="/product" element={<Product />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/solicitar-acceso" element={<RequestAccess />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ComingSoonProvider>
   </LanguageProvider>
 );
