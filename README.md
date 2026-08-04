@@ -1,4 +1,4 @@
-# DenX
+# DenX ALPHA 
 
 > **Stop overpaying your suppliers without realizing it.**
 
@@ -28,7 +28,6 @@ DenX is a financial reconciliation SaaS. It automatically compares **purchase or
 
 <p align="center"> 
   <img src="./public/readmePics/apppre2.png" alt="DenX reconciliation view detecting a critical unit-price discrepancy" width="100%">
-  <img src="./public/readmePics/apppre3.png" alt="DenX reconciliation view detecting a critical unit-price discrepancy" width="100%">
 </p>
 
 <table>
