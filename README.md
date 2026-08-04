@@ -26,21 +26,19 @@ DenX is a financial reconciliation SaaS. It automatically compares **purchase or
 
 **Catching a discrepancy in real time** — three-way match across order, delivery note, and invoice. Here DenX flags a **+25% unit-price variation** and hands the reviewer a decision panel: approve the variance, request a credit note, or escalate.
 
-<p align="center">
-  <img src="./public/readmePics/apppre.png" alt="DenX reconciliation view detecting a critical unit-price discrepancy" width="100%">
+<p align="center"> 
   <img src="./public/readmePics/apppre2.png" alt="DenX reconciliation view detecting a critical unit-price discrepancy" width="100%">
   <img src="./public/readmePics/apppre3.png" alt="DenX reconciliation view detecting a critical unit-price discrepancy" width="100%">
-  <img src="./public/readmePics/previewApp.webp" alt="DenX reconciliation view detecting a critical unit-price discrepancy" width="100%">
 </p>
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <img src="./public/Captura_de_pantalla_2026-08-04_a_las_10_53_43.png" alt="DenX rules and tolerances configuration" width="100%">
+      <img src="./public/readmePics/apppre.png" alt="DenX reconciliation view detecting a critical unit-price discrepancy" width="100%">
       <br><sub><b>Rules &amp; tolerances</b> — set price %, quantity, and tax thresholds, plus per-supplier auto-approval rules.</sub>
     </td>
     <td width="50%" valign="top">
-      <img src="./public/Captura_de_pantalla_2026-08-04_a_las_10_51_33.png" alt="DenX private access login screen" width="100%">
+      <img src="./public/readmePics/previewApp.webp" alt="DenX reconciliation view detecting a critical unit-price discrepancy" width="100%">
       <br><sub><b>Private access</b> — invite-only login for early-access teams.</sub>
     </td>
   </tr>
