@@ -1,77 +1,108 @@
-# React + TypeScript + Vite
+# DenX
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **Stop overpaying your suppliers without realizing it.**
 
-Currently, two official plugins are available:
+DenX is a financial reconciliation SaaS. It automatically compares **purchase orders, delivery notes, and invoices**, flags any mismatch, and gives your team a clear decision *before* a wrong payment ever reaches the bank.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
+![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)
+![Status](https://img.shields.io/badge/status-early%20access-16A34A)
 
-## React Compiler
+---
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 🔍 Sneak peek
 
-Note: This will impact Vite dev & build performances.
+> The landing page ships in English/Spanish. The in-app screenshots below are from the Spanish workspace.
 
-## Expanding the ESLint configuration
+**Landing — the pitch**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+<p align="center">
+  <img src="./public/Captura_de_pantalla_2026-08-04_a_las_10_50_23.png" alt="DenX landing page — Stop overpaying your suppliers without realizing it" width="100%">
+</p>
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**Catching a discrepancy in real time** — three-way match across order, delivery note, and invoice. Here DenX flags a **+25% unit-price variation** and hands the reviewer a decision panel: approve the variance, request a credit note, or escalate.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+<p align="center">
+  <img src="./public/Captura_de_pantalla_2026-08-04_a_las_10_53_33.png" alt="DenX reconciliation view detecting a critical unit-price discrepancy" width="100%">
+</p>
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="./public/Captura_de_pantalla_2026-08-04_a_las_10_53_43.png" alt="DenX rules and tolerances configuration" width="100%">
+      <br><sub><b>Rules &amp; tolerances</b> — set price %, quantity, and tax thresholds, plus per-supplier auto-approval rules.</sub>
+    </td>
+    <td width="50%" valign="top">
+      <img src="./public/Captura_de_pantalla_2026-08-04_a_las_10_51_33.png" alt="DenX private access login screen" width="100%">
+      <br><sub><b>Private access</b> — invite-only login for early-access teams.</sub>
+    </td>
+  </tr>
+</table>
+
+---
+
+## ✨ Features
+
+- **Three-way matching** — reconciles purchase order ↔ delivery note ↔ invoice automatically.
+- **Discrepancy detection** — catches unit-price variations, quantity mismatches, and tax rounding errors before payment.
+- **Configurable tolerances** — global thresholds for price (%), quantity (units), and tax difference (%), tuned with live sliders.
+- **Per-supplier rules** — e.g. auto-approve under €100, or always require a manual audit.
+- **Decision panel** — approve a variance, request a credit note, or escalate an incident, with full context.
+- **Audit trail** — resolution history and activity log for every file.
+- **ERP sync** — rules and results sync to your ERP, encrypted end-to-end.
+- **Impact summary** — estimated auto-reconciliation rate and time saved per month.
+- **Bilingual UI** — English / Spanish.
+
+---
+
+## ⚙️ How reconciliation works
+
+1. **Ingest** the three documents for a file: purchase order, delivery note, and invoice.
+2. **Match** line by line — quantities, unit prices, totals, and taxes.
+3. **Flag** anything outside the configured tolerances as a discrepancy.
+4. **Decide** from the review panel: approve, request a credit note, or escalate.
+5. **Sync** the outcome to your ERP with a full audit trail.
+
+---
+
+## 🛠️ Tech stack
+
+| Layer     | Tech     |
+| --------- | -------- |
+| Frontend  | React    |
+| Backend   | Node.js  |
+| ORM       | Prisma   |
+| Database  | MySQL    |
+
+---
+
+## 🚀 Getting started
+
+```bash
+# 1. Clone
+git clone https://github.com/<your-username>/denx.git
+cd denx
+
+# 2. Install dependencies
+npm install
+
+# 3. Configure environment
+cp .env.example .env
+# set DATABASE_URL and any auth / ERP keys
+
+# 4. Set up the database
+npx prisma migrate dev
+
+# 5. Run in development
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+> Adjust the scripts and folder layout to match your setup (for example, separate `client/` and `server/` packages).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# DenX---Landing-Page
-# DenX---Landing-Page
+## 🔒 Status
+
+DenX is in **private / early access** and under active development. The testimonials shown in-product are illustrative first impressions from the design-partner teams it's being built with.
