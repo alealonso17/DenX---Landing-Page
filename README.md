@@ -19,13 +19,18 @@ DenX is a financial reconciliation SaaS. It automatically compares **purchase or
 **Landing — the pitch**
 
 <p align="center">
-  <img src="./public/Captura_de_pantalla_2026-08-04_a_las_10_50_23.png" alt="DenX landing page — Stop overpaying your suppliers without realizing it" width="100%">
+  <img src="./public/preview.webp" alt="DenX landing page — Stop overpaying your suppliers without realizing it" width="100%">
+  <img src="./public/preview1.webp" alt="DenX landing page — Stop overpaying your suppliers without realizing it" width="100%">
+  <img src="./public/preview2.webp" alt="DenX landing page — Stop overpaying your suppliers without realizing it" width="100%">
 </p>
 
 **Catching a discrepancy in real time** — three-way match across order, delivery note, and invoice. Here DenX flags a **+25% unit-price variation** and hands the reviewer a decision panel: approve the variance, request a credit note, or escalate.
 
 <p align="center">
-  <img src="./public/Captura_de_pantalla_2026-08-04_a_las_10_53_33.png" alt="DenX reconciliation view detecting a critical unit-price discrepancy" width="100%">
+  <img src="./public/apppre.png" alt="DenX reconciliation view detecting a critical unit-price discrepancy" width="100%">
+  <img src="./public/apppre2.png" alt="DenX reconciliation view detecting a critical unit-price discrepancy" width="100%">
+  <img src="./public/apppre3.png" alt="DenX reconciliation view detecting a critical unit-price discrepancy" width="100%">
+  <img src="./public/previewApp.webp" alt="DenX reconciliation view detecting a critical unit-price discrepancy" width="100%">
 </p>
 
 <table>
