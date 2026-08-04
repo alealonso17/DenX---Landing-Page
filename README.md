@@ -19,18 +19,18 @@ DenX is a financial reconciliation SaaS. It automatically compares **purchase or
 **Landing — the pitch**
 
 <p align="center">
-  <img src="./public/preview.webp" alt="DenX landing page — Stop overpaying your suppliers without realizing it" width="100%">
-  <img src="./public/preview1.webp" alt="DenX landing page — Stop overpaying your suppliers without realizing it" width="100%">
-  <img src="./public/preview2.webp" alt="DenX landing page — Stop overpaying your suppliers without realizing it" width="100%">
+  <img src="./public/readmePics/preview.webp" alt="DenX landing page — Stop overpaying your suppliers without realizing it" width="100%">
+  <img src="./public/readmePics/preview1.webp" alt="DenX landing page — Stop overpaying your suppliers without realizing it" width="100%">
+  <img src="./public/readmePics/preview2.webp" alt="DenX landing page — Stop overpaying your suppliers without realizing it" width="100%">
 </p>
 
 **Catching a discrepancy in real time** — three-way match across order, delivery note, and invoice. Here DenX flags a **+25% unit-price variation** and hands the reviewer a decision panel: approve the variance, request a credit note, or escalate.
 
 <p align="center">
-  <img src="./public/apppre.png" alt="DenX reconciliation view detecting a critical unit-price discrepancy" width="100%">
-  <img src="./public/apppre2.png" alt="DenX reconciliation view detecting a critical unit-price discrepancy" width="100%">
-  <img src="./public/apppre3.png" alt="DenX reconciliation view detecting a critical unit-price discrepancy" width="100%">
-  <img src="./public/previewApp.webp" alt="DenX reconciliation view detecting a critical unit-price discrepancy" width="100%">
+  <img src="./public/readmePics/apppre.png" alt="DenX reconciliation view detecting a critical unit-price discrepancy" width="100%">
+  <img src="./public/readmePics/apppre2.png" alt="DenX reconciliation view detecting a critical unit-price discrepancy" width="100%">
+  <img src="./public/readmePics/apppre3.png" alt="DenX reconciliation view detecting a critical unit-price discrepancy" width="100%">
+  <img src="./public/readmePics/previewApp.webp" alt="DenX reconciliation view detecting a critical unit-price discrepancy" width="100%">
 </p>
 
 <table>
