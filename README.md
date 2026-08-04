@@ -78,33 +78,7 @@ DenX is a financial reconciliation SaaS. It automatically compares **purchase or
 | ORM       | Prisma   |
 | Database  | MySQL    |
 
----
-
-## 🚀 Getting started
-
-```bash
-# 1. Clone
-git clone https://github.com/<your-username>/denx.git
-cd denx
-
-# 2. Install dependencies
-npm install
-
-# 3. Configure environment
-cp .env.example .env
-# set DATABASE_URL and any auth / ERP keys
-
-# 4. Set up the database
-npx prisma migrate dev
-
-# 5. Run in development
-npm run dev
-```
-
-> Adjust the scripts and folder layout to match your setup (for example, separate `client/` and `server/` packages).
-
----
 
 ## 🔒 Status
 
-DenX is in **private / early access** and under active development. The testimonials shown in-product are illustrative first impressions from the design-partner teams it's being built with.
+DenX is in **private / early access** and under active development 
